@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    background-color: black;
+    color: aliceblue;
+    
+}
+body{
+    background-color: brown;
+}
+#nav{
+    color: chartreuse;
+   background-color: black; 
+    display: flex;
+    justify-content: space-between;
+    text-size-adjust: 20px;
+    text-decoration: none;
+   
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav h1{
+    padding: 10px;
+}
+i{
+    cursor: pointer;
+}
+nav ul li{
+    padding: 18px;
+
+}
+nav ul li form:not(:last-child){
+    background-color: blue;
+    
+}
+nav ul li form:last-child{
+    
+    position: relative;
+    margin-left: 100px;
+}
+
+
+nav ul li form input[type="search"] {
+    background-color: black;
+    color: white;
+    border: 1px solid white; 
+    padding: 5px;
+}
+#anav{
+    color: beige;
+    background-color: black;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+#maintopic img{
+    width: 400px;
+    padding: 10%;
+    padding-right: 50px;
+    cursor: pointer;
+}
+#maintopic, #coselect{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+}
+
+#maintopic div  p{
+    position: relative;
+    font-size: xx-large;
+    margin-left: 40px;
+    color: beige;
+}
+
+#coselect img {
+    width: 400px;
+    padding: 10%;
+    padding-right: 50px;
+    cursor: pointer;
+    height: 400px;
+}
+#coselect div  p{
+        position: relative;
+        font-size: xx-large;
+        margin-left: 200px;
+        color: beige;
+
+}

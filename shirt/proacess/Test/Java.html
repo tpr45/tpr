@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Advanced Java Quiz</h1>
+    <form id="quizForm">
+        <!-- Questions will be added dynamically here -->
+    </form>
+    <button type="button" onclick="submitQuiz()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+        const questions = [
+    {
+        question: "Which of the following is used to define a class in Java?",
+        options: ["class MyClass", "class: MyClass", "define class MyClass", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the default value of a boolean in Java?",
+        options: ["true", "false", "0", "null"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is a correct statement to create an instance of a class in Java?",
+        options: ["new ClassName()", "ClassName()", "ClassName.new()", "new ClassName"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is NOT a valid access modifier in Java?",
+        options: ["public", "private", "protected", "secure"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of these is a wrapper class in Java?",
+        options: ["Integer", "String", "Object", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the default value of an integer in Java?",
+        options: ["0", "null", "undefined", "0.0"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these methods can be used to read input from the console in Java?",
+        options: ["System.out.println()", "Scanner.nextLine()", "System.in.read()", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the size of a float variable in Java?",
+        options: ["4 bytes", "8 bytes", "2 bytes", "16 bytes"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following exceptions is thrown when a Java program tries to divide a number by zero?",
+        options: ["ArithmeticException", "NullPointerException", "IOException", "IndexOutOfBoundsException"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is a valid way to declare an array in Java?",
+        options: ["int[] arr = new int[5];", "int arr = new int[5];", "int[] arr = new int[];", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which keyword is used to inherit a class in Java?",
+        options: ["super", "this", "extends", "implements"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What does the 'this' keyword refer to in Java?",
+        options: ["The current class", "The current object", "The superclass", "The current method"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is a correct way to handle exceptions in Java?",
+        options: ["try-catch", "throw-catch", "catch-finally", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What does the 'static' keyword mean in Java?",
+        options: ["The method or variable belongs to the class, not the instance", "The method can be overridden", "The method belongs to an object", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the result of the expression '10 / 3' in Java?",
+        options: ["3", "3.0", "3.33", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which collection in Java is used to store key-value pairs?",
+        options: ["List", "Set", "Map", "Queue"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of the following is a valid way to declare a method in Java?",
+        options: ["public void methodName()", "methodName void public()", "public void methodName{}", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which interface does a class implement to be a collection in Java?",
+        options: ["Set", "Map", "Collection", "List"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the purpose of the 'super' keyword in Java?",
+        options: ["It refers to the superclass", "It refers to the current class", "It is used to call a constructor", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which method is used to compare two strings in Java?",
+        options: ["compare()", "compareTo()", "equals()", "equalsIgnoreCase()"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What will be the output of the following code snippet?\n\nString str = \"Hello\";\nstr.concat(\"World\");\nSystem.out.println(str);",
+        options: ["HelloWorld", "Hello", "World", "Error"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the return type of the 'hashCode()' method in Java?",
+        options: ["int", "String", "Object", "boolean"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these classes cannot be instantiated directly in Java?",
+        options: ["Thread", "Object", "Scanner", "String"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the base class for all Java classes?",
+        options: ["Object", "BaseClass", "RootClass", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these is true about Java garbage collection?",
+        options: ["It is used to deallocate memory for unused objects", "It is triggered manually", "It must be called explicitly by the programmer", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What does the 'finally' block do in Java?",
+        options: ["It executes regardless of whether an exception is thrown or not", "It catches exceptions", "It is used to terminate the program", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the default value of a local variable in Java?",
+        options: ["0", "null", "undefined", "No default value"],
+        correctAnswer: "d"
+    },
+    {
+        question: "What will the following code output?\n\nint i = 10;\nwhile (i > 0) { i--; }\nSystem.out.println(i);",
+        options: ["0", "10", "1", "Error"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following methods is used to start a thread in Java?",
+        options: ["start()", "run()", "execute()", "begin()"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is true for the String class in Java?",
+        options: ["Strings are mutable", "Strings are immutable", "Strings cannot be null", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which method is used to add an element to a List in Java?",
+        options: ["add()", "insert()", "append()", "put()"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following can be used as a key in a HashMap?",
+        options: ["String", "Integer", "Any Object", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following exceptions is thrown when attempting to access an invalid index in an array in Java?",
+        options: ["ArrayIndexOutOfBoundsException", "NullPointerException", "IndexOutOfBoundsException", "All of the above"],
+        correctAnswer: "a"
+    }
+];
+
+let quizContainer = document.getElementById("quizForm");
+
+function displayQuiz() {
+    let output = '';
+    questions.forEach((question, index) => {
+        output += `
+        <fieldset>
+            <legend>${index + 1}. ${question.question}</legend>
+            ${question.options.map((option, i) => {
+                return `
+                    <label>
+                        <input type="radio" name="q${index}" value="${String.fromCharCode(97 + i)}"> ${option}
+                    </label><br>
+                `;
+            }).join('')}
+        </fieldset>
+        `;
+    });
+    quizContainer.innerHTML = output;
+}
+
+function submitQuiz() {
+    const form = document.getElementById("quizForm");
+    let score = 0;
+    questions.forEach((question, index) => {
+        const selectedOption = form.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedOption && selectedOption.value === question.correctAnswer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerHTML = `You scored ${score} out of ${questions.length}`;
+}
+
+displayQuiz();
+
+    </script>
+</body>
+</html>

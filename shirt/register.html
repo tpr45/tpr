@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-6466276872687581">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466276872687581"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <form name="registration"    data-netlify="true" id="registerForm">
+        <input type="hidden" name="form-name" value="registration">
+         <h1>Register</h1>
+        <p>
+            <label>Name <br> <input type="text" name="name" id="name" required/></label>
+        </p>
+        <p>
+            <label>Email <br> <input type="email" name="email" id="email" required/></label>
+        </p>
+        <p id="emailtext"></p>
+        <p>
+            <label>Phone Number <br> <input type="tel" name="phone" id="ph_no" required pattern="[0-9]{10}" placeholder="1234567890"/></label>
+        </p>
+        <p id="ph_notext"></p>
+        <p>
+            <label>Password <br> <input type="password" name="password" id="password" required/></label>
+        </p>
+        <p>
+            <label>Re-enter Password <br> <input type="password" id="repassword" required/></label>
+        </p>
+        <p id="passwordtext"></p>
+        <p>
+            <button type="submit">Register</button>
+        </p>
+        <p>
+         if you have already registed ?<a href="./login.html">Login</a>
+        </p>
+    </form>
+    <script src="./register.js"></script>
+</body>
+</html>

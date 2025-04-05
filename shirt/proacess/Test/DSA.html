@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Advanced Data Structures and Algorithms Quiz</h1>
+    <form id="quizForm">
+        <!-- Questions will be added dynamically here -->
+    </form>
+    <button type="button" onclick="submitQuiz()">Submit</button>
+    <div id="result"></div>
+
+    <script >
+        const questions = [
+    {
+        question: "What is the time complexity of accessing an element in an array?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which data structure is used for implementing a breadth-first search?",
+        options: ["Stack", "Queue", "Linked List", "Array"],
+        correctAnswer: "b"
+    },
+    {
+        question: "In a binary search tree (BST), the left child is less than the parent. What is the time complexity of searching for an element in a balanced BST?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of the following is NOT a stable sorting algorithm?",
+        options: ["Merge Sort", "Bubble Sort", "Quick Sort", "Insertion Sort"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of these is the worst-case time complexity for QuickSort?",
+        options: ["O(n log n)", "O(n)", "O(n^2)", "O(log n)"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the space complexity of merge sort?",
+        options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the time complexity for finding an element in a hash table?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which data structure is used to implement function calls in most programming languages?",
+        options: ["Stack", "Queue", "Linked List", "Hash Map"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these is the time complexity of accessing an element in a linked list?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is NOT a valid operation for a stack?",
+        options: ["push()", "pop()", "peek()", "insert()"],
+        correctAnswer: "d"
+    },
+    {
+        question: "What is the worst-case time complexity of bubble sort?",
+        options: ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the time complexity for accessing an element in an array using index?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these is the best-case time complexity for bubble sort?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is a property of a binary heap?",
+        options: ["It is a complete binary tree", "All elements are equal", "It is a balanced tree", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following algorithms is used to find the shortest path in a graph?",
+        options: ["Dijkstra’s Algorithm", "Bellman-Ford Algorithm", "A* Algorithm", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of these data structures can be used to implement a priority queue?",
+        options: ["Array", "Linked List", "Heap", "Stack"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of these data structures is used to implement a depth-first search?",
+        options: ["Queue", "Array", "Stack", "Hash Map"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the space complexity of the quicksort algorithm in the best case?",
+        options: ["O(n)", "O(n log n)", "O(log n)", "O(1)"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of the following is an example of a divide-and-conquer algorithm?",
+        options: ["Merge Sort", "Insertion Sort", "Bubble Sort", "Selection Sort"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the time complexity for finding the maximum element in an unsorted array?",
+        options: ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "In a graph, what is the time complexity of Depth First Search (DFS)?",
+        options: ["O(V + E)", "O(V^2)", "O(E^2)", "O(V)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is used for storing large amounts of data with fast access?",
+        options: ["Hash Map", "Array", "Stack", "Queue"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is a correct implementation of a priority queue?",
+        options: ["Heap", "Linked List", "Stack", "Queue"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which data structure is ideal for representing a family tree?",
+        options: ["Array", "Stack", "Linked List", "Tree"],
+        correctAnswer: "d"
+    },
+    {
+        question: "What is the worst-case time complexity of inserting a new element into a binary search tree?",
+        options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these algorithms is used to find the minimum spanning tree of a graph?",
+        options: ["Kruskal’s Algorithm", "Prim’s Algorithm", "Dijkstra’s Algorithm", "Both a and b"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following is a correct implementation of a deque?",
+        options: ["Queue", "Stack", "Double-ended Queue", "None of the above"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the time complexity of accessing an element in a hash map?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these is the best sorting algorithm for large datasets with many repeated values?",
+        options: ["QuickSort", "MergeSort", "Radix Sort", "Bubble Sort"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the space complexity of an iterative depth-first search algorithm?",
+        options: ["O(n)", "O(log n)", "O(V + E)", "O(1)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these operations is performed on a binary heap?",
+        options: ["Insert", "Delete", "Extract min/max", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "What is the space complexity of a recursive DFS algorithm?",
+        options: ["O(n)", "O(log n)", "O(V)", "O(V + E)"],
+        correctAnswer: "a"
+    },
+    {
+        question: "In a doubly linked list, which of the following is true?",
+        options: ["Each node points to the next node and previous node", "Each node points only to the next node", "Nodes are stored in a non-contiguous manner", "Both a and c"],
+        correctAnswer: "d"
+    },
+];
+
+let quizContainer = document.getElementById("quizForm");
+
+function displayQuiz() {
+    let output = '';
+    questions.forEach((question, index) => {
+        output += `
+        <fieldset>
+            <legend>${index + 1}. ${question.question}</legend>
+            ${question.options.map((option, i) => {
+                return `
+                    <label>
+                        <input type="radio" name="q${index}" value="${String.fromCharCode(97 + i)}"> ${option}
+                    </label><br>
+                `;
+            }).join('')}
+        </fieldset>
+        `;
+    });
+    quizContainer.innerHTML = output;
+}
+
+function submitQuiz() {
+    const form = document.getElementById("quizForm");
+    let score = 0;
+    questions.forEach((question, index) => {
+        const selectedOption = form.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedOption && selectedOption.value === question.correctAnswer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerHTML = `You scored ${score} out of ${questions.length}`;
+}
+
+displayQuiz();
+
+    </script>
+</body>
+</html>

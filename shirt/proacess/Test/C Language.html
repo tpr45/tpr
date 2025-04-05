@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced C Programming Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Advanced C Programming Quiz</h1>
+    <form id="quizForm">
+        <!-- Questions will be added dynamically here -->
+    </form>
+    <button type="button" onclick="submitQuiz()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+        const questions = [
+    {
+        question: "What is the correct syntax to declare a pointer in C?",
+        options: ["pointer int p;", "int* p;", "int p*;", "int p;*"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the output of the following code?\nint x = 5; printf(\"%d\", x++)",
+        options: ["5", "6", "Error", "Undefined behavior"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is not a valid data type in C?",
+        options: ["int", "bool", "float", "char"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which function is used to allocate memory dynamically in C?",
+        options: ["malloc()", "calloc()", "realloc()", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following operators is used to access a member of a structure through a pointer?",
+        options: ["->", ".", "::", "&"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the result of the expression 10 / 4 in C?",
+        options: ["2.5", "2", "3", "1.5"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What does the ‘sizeof’ operator in C return?",
+        options: ["The size of a variable", "The size of an array", "The memory address", "The size of the data type"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following is a correct way to define a function in C?",
+        options: ["void function(){}", "void function() ;", "void function { }", "function() : void"],
+        correctAnswer: "a"
+    },
+    {
+        question: "In C, what is the result of 'sizeof(int)'?",
+        options: ["2 bytes", "4 bytes", "8 bytes", "Depends on the system"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is the correct way to declare a constant in C?",
+        options: ["#define MAX 100", "const int MAX = 100;", "MAX = 100;", "int MAX = 100;"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which keyword is used to define a function in C that does not return any value?",
+        options: ["void", "empty", "null", "none"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the output of the following code snippet?\nint a = 10; printf(\"%d\", ++a);",
+        options: ["10", "11", "Undefined behavior", "Error"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is a valid C variable name?",
+        options: ["int 2nd_variable;", "float $amount;", "char _value;", "int *main;"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the purpose of the ‘break’ statement in C?",
+        options: ["To end a loop", "To continue a loop", "To skip an iteration", "To terminate a function"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the default value of an uninitialized static variable in C?",
+        options: ["0", "Undefined", "Random", "Null"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following operators cannot be overloaded in C?",
+        options: ["+ (addition)", "* (multiplication)", "== (equality)", "sizeof"],
+        correctAnswer: "d"
+    },
+    {
+        question: "In C, the 'continue' statement is used to:",
+        options: ["End the loop", "Skip the rest of the code inside the loop for the current iteration", "Exit from the function", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following operators is used for modulus operation in C?",
+        options: ["%", "/", "#", "&"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the output of the following code?\nint i = 5; printf(\"%d\", i--);",
+        options: ["5", "4", "Error", "Undefined behavior"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is the correct way to allocate memory for an array of 5 integers dynamically in C?",
+        options: ["int *arr = malloc(5);", "int *arr = malloc(5 * sizeof(int));", "int arr[5];", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the purpose of a pointer in C?",
+        options: ["To store the memory address of a variable", "To store the value of a variable", "To perform arithmetic operations", "To create arrays dynamically"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which function is used to read a string from user input in C?",
+        options: ["gets()", "scanf()", "fgets()", "All of the above"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of the following loops is guaranteed to execute at least once?",
+        options: ["while loop", "for loop", "do-while loop", "None of the above"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of the following statements is true about the 'malloc' function?",
+        options: ["It allocates memory but doesn't initialize it", "It allocates and initializes memory to zero", "It frees allocated memory", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the purpose of the ‘return’ statement in C?",
+        options: ["To exit from a function and return a value", "To terminate the program", "To return a value from the main function", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is the correct syntax to declare an array of 5 integers in C?",
+        options: ["int arr(5);", "int arr[5];", "array int[5];", "int arr[] = {1, 2, 3, 4, 5};"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is an incorrect statement about C programming?",
+        options: ["C is a low-level programming language", "C supports object-oriented programming", "C was developed by Dennis Ritchie", "C is faster than Python"],
+        correctAnswer: "b"
+    },
+    {
+        question: "In C, what is the result of a pointer pointing to NULL?",
+        options: ["It points to the first address", "It points to a null reference", "It points to the base address", "It is undefined"],
+        correctAnswer: "b"
+    }, {
+        question: "What is the result of the following code snippet?\n\nint i = 5;\nif (i > 4) {\n    if (i < 10) {\n        printf(\"Inside nested if\\n\");\n    }\n}",
+        options: ["A) Inside nested if", "B) Inside outer if", "C) Error", "D) Nothing"],
+        correctAnswer: "A"
+    },
+    {
+        question: "Which of the following statements about function pointers in C is correct?",
+        options: [
+            "A) A function pointer stores the address of a function and allows calling it indirectly.",
+            "B) A function pointer stores the return value of a function.",
+            "C) A function pointer can only point to functions that return 'void'.",
+            "D) Function pointers cannot be used in C programming."
+        ],
+        correctAnswer: "A"
+    }
+];
+
+let quizContainer = document.getElementById("quizForm");
+
+function displayQuiz() {
+    let output = '';
+    questions.forEach((question, index) => {
+        output += `
+        <fieldset>
+            <legend>${index + 1}. ${question.question}</legend>
+            ${question.options.map((option, i) => {
+                return `
+                    <label>
+                        <input type="radio" name="q${index}" value="${String.fromCharCode(97 + i)}"> ${option}
+                    </label><br>
+                `;
+            }).join('')}
+        </fieldset>
+        `;
+    });
+    quizContainer.innerHTML = output;
+}
+
+function submitQuiz() {
+    const form = document.getElementById("quizForm");
+    let score = 0;
+    questions.forEach((question, index) => {
+        const selectedOption = form.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedOption && selectedOption.value === question.correctAnswer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerHTML = `You scored ${score} out of ${questions.length}`;
+}
+displayQuiz();
+
+    </script>
+</body>
+</html>

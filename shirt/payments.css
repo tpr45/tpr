@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black; 
+    margin: 0;
+    color: azure;
+}
+nav{
+    color: chartreuse;
+   background-color: black; 
+    display: flex;
+    justify-content: space-between;
+    text-size-adjust: 20px;
+    text-decoration: none;
+   
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav h1{
+    padding: 30px;
+}
+i{
+    cursor: pointer;
+}
+nav ul li{
+    padding: 30px;
+}
+nav ul li form{
+    background-color: blue;
+    border-radius: 20px;
+}
+nav ul li form input[type="search"] {
+    background-color: black;
+    color: white;
+    border: 1px solid white; 
+    padding: 5px;
+}
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+#qr-container {
+    margin-top: 20px;
+    display: none;
+}
+img {
+    margin-top: 10px;
+}
+.error {
+    color: red;
+    font-size: 14px;
+}

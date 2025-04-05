@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-6466276872687581">
+    <title>Certificate of Completion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .certificate {
+            width: 800px;
+            height: 600px;
+            background-color: white;
+            border: 10px solid #ddd;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        .certificate h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #333;
+        }
+        .certificate h2 {
+            margin: 10px 0 30px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .certificate p {
+            font-size: 16px;
+            color: #555;
+        }
+        .certificate .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #f5f5f5;
+            border: 3px solid #333;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            position: relative;
+        }
+        .badge::before {
+            content: "PROFESSIONAL";
+            font-size: 12px;
+            background: black;
+            color: white;
+            padding: 2px 8px;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .signature {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signature div {
+            text-align: left;
+        }
+        .qr {
+            width: 100px;
+            height: 100px;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .logo {
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+    
+    .logo-text {
+        color: #007BFF; /* Blue color for "tpr" */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .logo-life {
+        color: #28a745; /* Green color for ".life" */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin-left: 5px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="certificate">
+    <div class="logo">
+        <span class="logo-text">tpr</span><span class="logo-life">.life</span>
+    </div>
+    <h1>CERTIFICATE OF COMPLETION</h1>
+    <h2>This certifies that</h2>
+    <p class="name" id="myname">/p>
+    <p>has passed the tpr.life basic certification exam and is hereby declared a</p>
+    <div class="badge" id="badge1"></div>
+    <p>The candidate has passed the exam at the Professional level.</p>
+    <p><em id="newdate"></em></p>
+
+    <div class="signature">
+        <div>
+            <p><strong>Prashanth</strong></p>
+            <p>for Tpr.life</p>
+        </div>
+        
+    </div>
+
+    <p class="footer">Verify completion at <a href="./login.html">Tpr.life</a></p>
+</div>
+<script>
+
+
+    let newd=document.getElementById('newdate');
+   let d=localStorage.getItem("userwise Certificate Date")
+   
+    newd.innerText="Issued on "+d;
+    let badge1=document.getElementById('badge1');
+
+    let sub=localStorage.getItem("course");
+    badge1.innerText="Certified for "+sub+" Course";
+    let myname=document.getElementById('myname');
+    let name=localStorage.getItem("name")
+    myname.innerText=name;
+
+</script>
+</body>
+</html>

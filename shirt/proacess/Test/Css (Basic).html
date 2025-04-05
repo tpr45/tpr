@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Language Quiz</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>CSS Basic Level Quiz</h1>
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div>
+            <p>1. What does CSS stand for?</p>
+            <label><input type="radio" name="q1" value="a"> Computer Style Sheets</label><br>
+            <label><input type="radio" name="q1" value="b"> Cascading Style Sheets</label><br>
+            <label><input type="radio" name="q1" value="c"> Creative Style Sheets</label><br>
+            <label><input type="radio" name="q1" value="d"> Colorful Style Sheets</label><br>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which of the following is the correct syntax for linking a CSS file?</p>
+            <label><input type="radio" name="q2" value="a"> <code>&lt;link href="style.css" rel="stylesheet"&gt;</code></label>
+            <label><input type="radio" name="q2" value="b"> <code>&lt;style src="style.css"&gt;&lt;/style&gt;</code></label>
+            <label><input type="radio" name="q2" value="c"> <code>&lt;stylesheet href="style.css"&gt;</code></label>
+            <label><input type="radio" name="q2" value="d"> <code>&lt;link rel="style" href="style.css"&gt;</code></label>
+        </div>
+
+        <!-- Question 3 -->
+        <div>
+            <p>3. Which property is used to change the background color of an element?</p>
+            <label><input type="radio" name="q3" value="a"> bgcolor</label><br>
+            <label><input type="radio" name="q3" value="b"> background-color</label><br>
+            <label><input type="radio" name="q3" value="c"> color-background</label><br>
+            <label><input type="radio" name="q3" value="d"> background</label><br>
+        </div>
+
+        <!-- Question 4 -->
+        <div>
+            <p>4. What property is used to change the text color in CSS?</p>
+            <label><input type="radio" name="q4" value="a"> text-color</label><br>
+            <label><input type="radio" name="q4" value="b"> color</label><br>
+            <label><input type="radio" name="q4" value="c"> font-color</label><br>
+            <label><input type="radio" name="q4" value="d"> textstyle</label><br>
+        </div>
+
+        <!-- Question 5 -->
+        <div>
+            <p>5. Which property is used to change the font of the text?</p>
+            <label><input type="radio" name="q5" value="a"> font-style</label><br>
+            <label><input type="radio" name="q5" value="b"> font-family</label><br>
+            <label><input type="radio" name="q5" value="c"> text-font</label><br>
+            <label><input type="radio" name="q5" value="d"> font-type</label><br>
+        </div>
+
+        <!-- Question 6 -->
+        <div>
+            <p>6. Which CSS property is used to set the spacing between the lines of text?</p>
+            <label><input type="radio" name="q6" value="a"> letter-spacing</label><br>
+            <label><input type="radio" name="q6" value="b"> line-height</label><br>
+            <label><input type="radio" name="q6" value="c"> text-spacing</label><br>
+            <label><input type="radio" name="q6" value="d"> word-spacing</label><br>
+        </div>
+
+        <!-- Question 7 -->
+        <div>
+            <p>7. Which property is used to set the margin space around an element?</p>
+            <label><input type="radio" name="q7" value="a"> margin</label><br>
+            <label><input type="radio" name="q7" value="b"> padding</label><br>
+            <label><input type="radio" name="q7" value="c"> space</label><br>
+            <label><input type="radio" name="q7" value="d"> border</label><br>
+        </div>
+
+        <!-- Question 8 -->
+        <div>
+            <p>8. What is the default value of the `position` property in CSS?</p>
+            <label><input type="radio" name="q8" value="a"> absolute</label><br>
+            <label><input type="radio" name="q8" value="b"> relative</label><br>
+            <label><input type="radio" name="q8" value="c"> fixed</label><br>
+            <label><input type="radio" name="q8" value="d"> static</label><br>
+        </div>
+
+        <!-- Question 9 -->
+        <div>
+            <p>9. Which CSS property is used to control the size of the text?</p>
+            <label><input type="radio" name="q9" value="a"> text-size</label><br>
+            <label><input type="radio" name="q9" value="b"> font-size</label><br>
+            <label><input type="radio" name="q9" value="c"> text-font</label><br>
+            <label><input type="radio" name="q9" value="d"> size-text</label><br>
+        </div>
+
+        <!-- Question 10 -->
+        <div>
+            <p>10. Which CSS property is used to display an element as a block-level element?</p>
+            <label><input type="radio" name="q10" value="a"> block</label><br>
+            <label><input type="radio" name="q10" value="b"> display</label><br>
+            <label><input type="radio" name="q10" value="c"> inline</label><br>
+            <label><input type="radio" name="q10" value="d"> visibility</label><br>
+        </div>
+
+        <!-- Question 11 -->
+        <div>
+            <p>11. Which CSS property is used to align text to the center?</p>
+            <label><input type="radio" name="q11" value="a"> text-align</label><br>
+            <label><input type="radio" name="q11" value="b"> text-center</label><br>
+            <label><input type="radio" name="q11" value="c"> align-text</label><br>
+            <label><input type="radio" name="q11" value="d"> center-align</label><br>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. How do you add a comment in CSS?</p>
+            <label><input type="radio" name="q12" value="a"> <code>/* This is a comment */</code></label>
+            <label><input type="radio" name="q12" value="b"> <code>// This is a comment</code></label>
+            <label><input type="radio" name="q12" value="c"> <code>&lt;!-- This is a comment --&gt;</code></label>
+            <label><input type="radio" name="q12" value="d"> <code># This is a comment</code></label>
+        </div>
+
+        <!-- Question 13 -->
+        <div>
+            <p>13. Which CSS property is used to change the font size of text?</p>
+            <label><input type="radio" name="q13" value="a"> text-font-size</label><br>
+            <label><input type="radio" name="q13" value="b"> font-size</label><br>
+            <label><input type="radio" name="q13" value="c"> size-font</label><br>
+            <label><input type="radio" name="q13" value="d"> text-size</label><br>
+        </div>
+
+        <!-- Question 14 -->
+        <div>
+            <p>14. How do you make a list in CSS appear horizontally (in a row)?</p>
+            <label><input type="radio" name="q14" value="a"> list-inline</label><br>
+            <label><input type="radio" name="q14" value="b"> list-row</label><br>
+            <label><input type="radio" name="q14" value="c"> display: inline</label><br>
+            <label><input type="radio" name="q14" value="d"> display: block</label><br>
+        </div>
+
+        <!-- Question 15 -->
+        <div>
+            <p>15. Which CSS property is used to set the space between words in a text?</p>
+            <label><input type="radio" name="q15" value="a"> word-spacing</label><br>
+            <label><input type="radio" name="q15" value="b"> letter-spacing</label><br>
+            <label><input type="radio" name="q15" value="c"> text-spacing</label><br>
+            <label><input type="radio" name="q15" value="d"> text-indent</label><br>
+        </div>
+
+        <!-- Question 16 -->
+        <div>
+            <p>16. Which CSS property is used to set the width of an element?</p>
+            <label><input type="radio" name="q16" value="a"> width</label><br>
+            <label><input type="radio" name="q16" value="b"> element-width</label><br>
+            <label><input type="radio" name="q16" value="c"> size</label><br>
+            <label><input type="radio" name="q16" value="d"> box-size</label><br>
+        </div>
+
+        <!-- Question 17 -->
+        <div>
+            <p>17. How do you make an element invisible in CSS but still take up space?</p>
+            <label><input type="radio" name="q17" value="a"> visibility: hidden</label><br>
+            <label><input type="radio" name="q17" value="b"> display: none</label><br>
+            <label><input type="radio" name="q17" value="c"> opacity: 0</label><br>
+            <label><input type="radio" name="q17" value="d"> hide: true</label><br>
+        </div>
+
+        <!-- Question 18 -->
+        <div>
+            <p>18. Which property is used to define the color of the border in CSS?</p>
+            <label><input type="radio" name="q18" value="a"> border-color</label><br>
+            <label><input type="radio" name="q18" value="b"> color-border</label><br>
+            <label><input type="radio" name="q18" value="c"> border-style</label><br>
+            <label><input type="radio" name="q18" value="d"> border-type</label><br>
+        </div>
+
+        <!-- Question 19 -->
+        <div>
+            <p>19. How can you apply multiple classes to an element?</p>
+            <label><input type="radio" name="q19" value="a"> .class1 .class2</label><br>
+            <label><input type="radio" name="q19" value="b"> .class1,class2</label><br>
+            <label><input type="radio" name="q19" value="c"> class1;class2</label><br>
+            <label><input type="radio" name="q19" value="d"> .class1.class2</label><br>
+        </div>
+
+        <!-- Question 20 -->
+        <div>
+            <p>20. How do you add shadow to text in CSS?</p>
+            <label><input type="radio" name="q20" value="a"> text-shadow</label><br>
+            <label><input type="radio" name="q20" value="b"> shadow-text</label><br>
+            <label><input type="radio" name="q20" value="c"> font-shadow</label><br>
+            <label><input type="radio" name="q20" value="d"> text-effect</label><br>
+        </div>
+        <!-- Question 21 -->
+<div>
+    <p>21. How do you apply a CSS rule to an element with an ID of "header"?</p>
+    <label><input type="radio" name="q21" value="a"> #header</label><br>
+    <label><input type="radio" name="q21" value="b"> .header</label><br>
+    <label><input type="radio" name="q21" value="c"> header</label><br>
+    <label><input type="radio" name="q21" value="d"> *header</label><br>
+</div>
+
+<!-- Question 22 -->
+<div>
+    <p>22. Which property is used to change the height of an element?</p>
+    <label><input type="radio" name="q22" value="a"> height</label><br>
+    <label><input type="radio" name="q22" value="b"> size</label><br>
+    <label><input type="radio" name="q22" value="c"> element-height</label><br>
+    <label><input type="radio" name="q22" value="d"> box-height</label><br>
+</div>
+
+<!-- Question 23 -->
+<div>
+    <p>23. What property is used to change the border style of an element?</p>
+    <label><input type="radio" name="q23" value="a"> border-style</label><br>
+    <label><input type="radio" name="q23" value="b"> border-type</label><br>
+    <label><input type="radio" name="q23" value="c"> border-width</label><br>
+    <label><input type="radio" name="q23" value="d"> border-size</label><br>
+</div>
+
+<!-- Question 24 -->
+<div>
+    <p>24. Which value for the `position` property allows an element to scroll along with the page?</p>
+    <label><input type="radio" name="q24" value="a"> fixed</label><br>
+    <label><input type="radio" name="q24" value="b"> absolute</label><br>
+    <label><input type="radio" name="q24" value="c"> sticky</label><br>
+    <label><input type="radio" name="q24" value="d"> relative</label><br>
+</div>
+
+<!-- Question 25 -->
+<div>
+    <p>25. How do you hide an element but still leave space for it on the page?</p>
+    <label><input type="radio" name="q25" value="a"> visibility: hidden</label><br>
+    <label><input type="radio" name="q25" value="b"> display: none</label><br>
+    <label><input type="radio" name="q25" value="c"> opacity: 0</label><br>
+    <label><input type="radio" name="q25" value="d"> hidden: true</label><br>
+</div>
+
+<!-- Question 26 -->
+<div>
+    <p>26. Which of the following CSS properties can be used to create a rounded corner on an element?</p>
+    <label><input type="radio" name="q26" value="a"> border-radius</label><br>
+    <label><input type="radio" name="q26" value="b"> corner-radius</label><br>
+    <label><input type="radio" name="q26" value="c"> round-corner</label><br>
+    <label><input type="radio" name="q26" value="d"> radius-corner</label><br>
+</div>
+
+<!-- Question 27 -->
+<div>
+    <p>27. Which CSS property is used to make an element visible only when the user hovers over it?</p>
+    <label><input type="radio" name="q27" value="a"> display: hover</label><br>
+    <label><input type="radio" name="q27" value="b"> visibility: hover</label><br>
+    <label><input type="radio" name="q27" value="c"> opacity: hover</label><br>
+    <label><input type="radio" name="q27" value="d"> visibility: hidden; opacity: 1</label><br>
+</div>
+
+<!-- Question 28 -->
+<div>
+    <p>28. Which property is used to apply a shadow effect to an element?</p>
+    <label><input type="radio" name="q28" value="a"> box-shadow</label><br>
+    <label><input type="radio" name="q28" value="b"> shadow-effect</label><br>
+    <label><input type="radio" name="q28" value="c"> text-shadow</label><br>
+    <label><input type="radio" name="q28" value="d"> element-shadow</label><br>
+</div>
+
+<!-- Question 29 -->
+<div>
+    <p>29. What is the default value of the `display` property?</p>
+    <label><input type="radio" name="q29" value="a"> inline</label><br>
+    <label><input type="radio" name="q29" value="b"> block</label><br>
+    <label><input type="radio" name="q29" value="c"> none</label><br>
+    <label><input type="radio" name="q29" value="d"> inline-block</label><br>
+</div>
+
+<!-- Question 30 -->
+<div>
+    <p>30. What is the shorthand property for defining `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`?</p>
+    <label><input type="radio" name="q30" value="a"> padding</label><br>
+    <label><input type="radio" name="q30" value="b"> margin</label><br>
+    <label><input type="radio" name="q30" value="c"> space</label><br>
+    <label><input type="radio" name="q30" value="d"> border-spacing</label><br>
+</div>
+
+
+        <!-- Add remaining questions here... -->
+        
+        <br>
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <script>
+     function calculateScore() {
+    const form = document.getElementById('quizForm');
+    const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "b",
+        q4: "b",
+        q5: "b",
+        q6: "b",
+        q7: "a",
+        q8: "d",
+        q9: "b",
+        q10: "b",
+        q11: "a",
+        q12: "a",
+        q13: "b",
+        q14: "c",
+        q15: "a",
+        q16: "a",
+        q17: "a",
+        q18: "a",
+        q19: "a",
+        q20: "a",
+        q21: 'a',
+        q22: 'a',
+        q23: 'a',
+        q24: 'c',
+        q25: 'a',
+        q26: 'a',
+        q27: 'a',
+        q28: 'a',
+        q29: 'b',
+        q30: 'a'
+    };
+
+    // Loop through each question and check the answer
+    let score = 0;
+    const totalQuestions = Object.keys(answers).length;
+
+    // Loop through each question and check if the answer is correct
+    for (let i = 1; i <= 30; i++) {
+        const question = `q${i}`;
+        const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
+
+        // Check if the current question exists in the answers object
+        if (answers[question]) {
+            // If an answer is selected and it matches the correct one, increase the score
+            if (selectedAnswer && selectedAnswer.value === answers[question]) {
+                score++;
+            }
+        }
+    }
+
+    // Display the result
+    const resultDiv = document.createElement('div');
+    resultDiv.id = 'result';
+    resultDiv.innerHTML = `<h3>Your Score: ${score} out of ${totalQuestions}</h3>`;
+    document.body.appendChild(resultDiv);
+}
+
+    </script>
+</body>
+</html>

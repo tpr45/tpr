@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-6466276872687581">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TPR</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466276872687581"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav  id="nav"  >
+    <h1>TPR</h1>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a href="./index.html" style="color: chartreuse; text-decoration: none; cursor: pointer;">Home</a></li>
+      <li><i class="fa-solid fa-user"></i><a href="./about.html" style="color: chartreuse; text-decoration: none; cursor: pointer;">About</a></li>
+      <li><i class="fa-solid fa-user"></i><a href="./contact.html" style="color: chartreuse; text-decoration: none; cursor: pointer;">Contact Us</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html" style="color: chartreuse; text-decoration: none; cursor: pointer;" id="logout">Logout</a></li>
+    </ul>
+  </nav>
+  <div id="anav" style="visibility: visible;">
+    <h1>Where Quality & Clarity Matters</h1>
+    <p>All Study resource are available, exclusively available on TPR.LIFE</p>
+    <p>Devepoled for tablets, PC & TV</p>
+  </div>
+  <div id="maintopic" > 
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUNmv5o3RyxrDChISZvqb5fG9nxsTQVTxPg&s" alt="Html" onclick="sub('Html')"> <br>
+         <p>HTML </p>
+    </div>
+    <div>
+      <img src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png" alt="Css" onclick="sub('Css (Basic)')"><br>
+         <p>CSS (Basic)</p>
+    </div>
+     <div>
+    <img src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png" alt="Css" onclick="sub('Css (Advanced)')"><br>
+         <p>CSS (Advanced)</p>
+    </div>
+
+    <div>
+       <img src="https://files.ably.io/ghost/prod/2023/12/choosing-the-best-javascript-frameworks-for-your-next-project.png" alt="Js" onclick="sub('Java Script(Js)')"> <br>
+          <p>Java Script(Js)</p>
+    </div>
+    <div>
+      <img src="https://miro.medium.com/v2/resize:fit:1400/1*ynY8NUVR5-cV99_BlAh0MQ.png" alt="" onclick="sub('C Language')"> <br>
+         <p>C Language </p>
+    </div>
+    <div>
+      <img src="https://c8.alamy.com/comp/W3XFHY/data-structures-concept-with-random-parts-of-program-code-data-structures-with-programming-code-abstract-technology-background-of-software-developer-W3XFHY.jpg" alt="dsa"   onclick="sub('DSA')"><br>
+      <p>DSA</p>
+    </div>
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBYnWJW6a9-67ePAHwNGAyBuoMCz1E7joVGA&s" alt="c++ Language" onclick="sub('C++ Language')"> <br>
+         <p>C++ Language</p>
+    </div>
+   <div>
+      <img src="https://miro.medium.com/v2/resize:fit:700/0*gtY-llyEbkeoS1Sp.png" alt="java" onclick="sub('Java')"> <br>
+        <p>Java </p>
+    </div>
+    <div>
+      <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1637422966499/jx6h36yHp.jpeg" alt="python"   onclick="sub('Python')"><br>
+      <p>Python</p>
+    </div>
+  </div>
+ <p>Thank you</p>
+</body>
+<script>
+  let pemail=localStorage.getItem("email");
+  let ppassword=localStorage.getItem("password");
+ 
+  console.log(pemail);
+  console.log(localStorage);
+  if(pemail==null&&ppassword==null)
+  {
+  window.location.href=`./login.html`;
+  }
+  function sub(temp){
+    localStorage.setItem("course",temp);
+   window.location = `./coursedetails.html`;
+}
+
+</script>
+</html>

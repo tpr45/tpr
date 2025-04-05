@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Advanced Python Quiz</h1>
+    <form id="quizForm">
+        <!-- Questions will be added dynamically here -->
+    </form>
+    <button type="button" onclick="submitQuiz()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+        const questions = [
+    {
+        question: "What is the output of the following code?\n\nprint(2 ** 3)",
+        options: ["6", "8", "23", "Error"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is used to create a list in Python?",
+        options: ["[]", "{}", "()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "How do you declare a function in Python?",
+        options: ["function myFunction():", "def myFunction():", "func myFunction():", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the correct way to open a file for reading in Python?",
+        options: ["open('file.txt', 'r')", "open('file.txt')", "read('file.txt')", "open('file.txt', 'w')"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is a mutable data type in Python?",
+        options: ["String", "Tuple", "List", "None of the above"],
+        correctAnswer: "c"
+    },
+    {
+        question: "How do you start a comment in Python?",
+        options: ["//", "#", "/*", "!-"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following methods is used to add an element to a set in Python?",
+        options: ["add()", "append()", "insert()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the result of the expression: '5' + 3 in Python?",
+        options: ["53", "8", "Error", "None of the above"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the return type of the input() function in Python?",
+        options: ["String", "Integer", "List", "Boolean"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is used to define a class in Python?",
+        options: ["class MyClass", "def MyClass", "create MyClass", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "How do you create an instance of a class in Python?",
+        options: ["MyClass()", "new MyClass()", "MyClass.create()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What will be the output of the following code?\n\nx = [1, 2, 3]\nprint(x[1:2])",
+        options: ["[1]", "[2]", "[2, 3]", "[1, 2]"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which function is used to get the length of a list in Python?",
+        options: ["length()", "len()", "count()", "size()"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What does the 'yield' keyword do in Python?",
+        options: ["Raises an exception", "Pauses the function and returns a generator", "Creates a list", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is used to iterate over a dictionary in Python?",
+        options: ["for key, value in dict.items()", "for key in dict:", "for value in dict:", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "How do you import a module in Python?",
+        options: ["include module_name", "import module_name", "use module_name", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the result of the following expression: 10 // 3 in Python?",
+        options: ["3.33", "3", "4", "Error"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following methods is used to remove an element from a list in Python?",
+        options: ["delete()", "remove()", "pop()", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following is an immutable data type in Python?",
+        options: ["List", "Dictionary", "String", "Set"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the correct syntax to create a tuple in Python?",
+        options: ["[]", "()", "{}", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What does the 'pass' statement do in Python?",
+        options: ["Terminates the loop", "Acts as a placeholder for future code", "Returns None", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What will be the output of the following code?\n\nx = {1, 2, 3}\ny = {3, 4, 5}\nprint(x & y)",
+        options: ["{1, 2, 3}", "{3}", "{1, 2, 4, 5}", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following statements is true about Python?",
+        options: ["Python is a compiled language", "Python is a strongly typed language", "Python is a low-level language", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the result of the expression 'True and False' in Python?",
+        options: ["True", "False", "None", "Error"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which method is used to remove whitespaces from both ends of a string in Python?",
+        options: ["trim()", "strip()", "clean()", "remove()"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the result of the following code?\n\nx = 'Python'\nprint(x[1:4])",
+        options: ["Pyt", "yth", "Pyt", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is used to raise an exception in Python?",
+        options: ["raise", "throw", "error", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following methods is used to add a key-value pair in a dictionary?",
+        options: ["add()", "append()", "insert()", "update()"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following methods is used to sort a list in Python?",
+        options: ["sort()", "order()", "arrange()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following data types are mutable in Python?",
+        options: ["List and Tuple", "Set and Dictionary", "String and Tuple", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "How do you create a dictionary in Python?",
+        options: ["{}", "[]", "()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the difference between 'deep copy' and 'shallow copy' in Python?",
+        options: ["Shallow copy copies only the references, while deep copy creates a new object", "There is no difference", "Deep copy is faster", "None of the above"],
+        correctAnswer: "a"
+    }
+];
+
+let quizContainer = document.getElementById("quizForm");
+
+function displayQuiz() {
+    let output = '';
+    questions.forEach((question, index) => {
+        output += `
+        <fieldset>
+            <legend>${index + 1}. ${question.question}</legend>
+            ${question.options.map((option, i) => {
+                return `
+                    <label>
+                        <input type="radio" name="q${index}" value="${String.fromCharCode(97 + i)}"> ${option}
+                    </label><br>
+                `;
+            }).join('')}
+        </fieldset>
+        `;
+    });
+    quizContainer.innerHTML = output;
+}
+
+function submitQuiz() {
+    const form = document.getElementById("quizForm");
+    let score = 0;
+    questions.forEach((question, index) => {
+        const selectedOption = form.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedOption && selectedOption.value === question.correctAnswer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerHTML = `You scored ${score} out of ${questions.length}`;
+}
+
+displayQuiz();
+
+    </script>
+</body>
+</html>

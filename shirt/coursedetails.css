@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: aliceblue;
+}
+nav{
+    color: chartreuse;
+   background-color: black; 
+    display: flex;
+    justify-content: space-between;
+    text-size-adjust: 20px;
+    text-decoration: none;
+   
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav h1{
+    padding: 30px;
+}
+i{
+    cursor: pointer;
+}
+nav ul li{
+    padding: 30px;
+}
+nav ul li form{
+    background-color: blue;
+    border-radius: 20px;
+}
+nav ul li form input[type="search"] {
+    background-color: black;
+    color: white;
+    border: 1px solid white; 
+    padding: 5px;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    font-size: xxx-large;
+    
+}
+button{
+    background-color: greenyellow;
+    color: black;
+    font-size: xx-large;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+button:hover{
+    background-color: goldenrod;
+}
+
+
+#selectmode{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

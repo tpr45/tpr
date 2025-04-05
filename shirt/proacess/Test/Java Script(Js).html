@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Advanced JavaScript Quiz</h1>
+    <form id="quizForm">
+        <!-- Questions go here -->
+    </form>
+    <button type="button" onclick="submitQuiz()">Submit</button>
+    <div id="result"></div>
+
+    <script >
+        const questions = [
+    {
+        question: "What does the 'this' keyword refer to in JavaScript?",
+        options: ["The current object", "The parent object", "The global object", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which method is used to add an element to the end of an array?",
+        options: ["push()", "pop()", "shift()", "unshift()"],
+        correctAnswer: "a"
+    },
+    {
+        question: "How do you create a function in JavaScript?",
+        options: ["function myFunc()", "create function myFunc()", "function = myFunc()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the result of 5 == '5' in JavaScript?",
+        options: ["true", "false", "null", "undefined"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is a falsy value in JavaScript?",
+        options: ["0", "1", "true", "All of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which method can be used to find the length of a string in JavaScript?",
+        options: ["length()", "size()", "count()", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the correct way to define a variable in JavaScript?",
+        options: ["var x = 10", "let x = 10", "const x = 10", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following is NOT a JavaScript data type?",
+        options: ["string", "boolean", "character", "object"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the use of the 'map()' function in JavaScript?",
+        options: ["To create a new array by applying a function to each element", "To filter elements of an array", "To find the index of an element", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of these is the correct syntax to create an object in JavaScript?",
+        options: ["var obj = {};", "var obj = [];", "var obj = ();", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What does JSON stand for?",
+        options: ["JavaScript Object Notation", "Java Standard Object Notation", "Java Script Output Notation", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "How can you avoid callback hell in JavaScript?",
+        options: ["Using promises", "Using setTimeout", "Using break statements", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is a closure in JavaScript?",
+        options: ["A function within a function that remembers its outer function's variables", "A type of loop", "A special function for error handling", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is an event handler in JavaScript?",
+        options: ["onClick", "onLoad", "onSubmit", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "What does the 'bind()' method do in JavaScript?",
+        options: ["It binds a function to a specific object", "It binds a variable to a function", "It creates a copy of an array", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "Which of the following is NOT a loop in JavaScript?",
+        options: ["for", "while", "loop", "do...while"],
+        correctAnswer: "c"
+    },
+    {
+        question: "What does 'NaN' stand for in JavaScript?",
+        options: ["Not a Name", "Not a Number", "Not a Null", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the output of console.log(typeof null);?",
+        options: ["'null'", "'object'", "'undefined'", "'NaN'"],
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the result of '10' + 20 in JavaScript?",
+        options: ["30", "1020", "undefined", "NaN"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which method is used to remove the last element from an array in JavaScript?",
+        options: ["pop()", "shift()", "slice()", "splice()"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What does the 'slice()' method do in JavaScript?",
+        options: ["It extracts a section of a string or array", "It merges two arrays", "It sorts an array", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the output of '5' === 5 in JavaScript?",
+        options: ["true", "false", "undefined", "NaN"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is true about JavaScript variables?",
+        options: ["They are case sensitive", "They must begin with a letter, $, or _", "They can contain letters, numbers, $, and _", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "Which of the following functions is used to parse a string into an integer in JavaScript?",
+        options: ["parseInt()", "parseFloat()", "toFixed()", "toString()"],
+        correctAnswer: "a"
+    },
+    {
+        question: "How do you prevent a function from running multiple times in JavaScript?",
+        options: ["Using debounce", "Using setTimeout", "Using clearTimeout", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What does the 'reduce()' method do in JavaScript?",
+        options: ["It reduces an array to a single value by applying a function", "It filters elements from an array", "It maps elements to new values", "None of the above"],
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the result of 3 + 2 + '1' in JavaScript?",
+        options: ["5", "32", "21", "None of the above"],
+        correctAnswer: "c"
+    },
+    {
+        question: "Which of these is a way to define a JavaScript function?",
+        options: ["function myFunc() {}", "() => {}", "myFunc = function() {}", "All of the above"],
+        correctAnswer: "d"
+    },
+    {
+        question: "What is the default value of 'strict mode' in JavaScript?",
+        options: ["Enabled", "Disabled", "Undefined", "None of the above"],
+        correctAnswer: "b"
+    },
+    {
+        question: "Which of the following is used to store a constant in JavaScript?",
+        options: ["const", "let", "var", "None of the above"],
+        correctAnswer: "a"
+    },
+];
+
+let quizContainer = document.getElementById("quizForm");
+
+function displayQuiz() {
+    let output = '';
+    questions.forEach((question, index) => {
+        output += `
+        <fieldset>
+            <legend>${index + 1}. ${question.question}</legend>
+            ${question.options.map((option, i) => {
+                return `
+                    <label>
+                        <input type="radio" name="q${index}" value="${String.fromCharCode(97 + i)}"> ${option}
+                    </label><br>
+                `;
+            }).join('')}
+        </fieldset>
+        `;
+    });
+    quizContainer.innerHTML = output;
+}
+
+function submitQuiz() {
+    const form = document.getElementById("quizForm");
+    let score = 0;
+    questions.forEach((question, index) => {
+        const selectedOption = form.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedOption && selectedOption.value === question.correctAnswer) {
+            score++;
+        }
+    });
+    document.getElementById("result").innerHTML = `You scored ${score} out of ${questions.length}`;
+}
+
+displayQuiz();
+
+    </script>
+</body>
+</html>
